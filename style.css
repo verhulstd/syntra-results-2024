@@ -1,5 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:opsz,wght@14..32,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
 :root {
   font-size: 62.5%;
   --LightSlateBlue: hsl(252, 100%, 67%);
@@ -17,10 +19,15 @@
 * {
   box-sizing: border-box;
 }
-
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+canvas {
+  pointer-events: none;
+}
 main {
   display: grid;
-
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
@@ -51,6 +58,11 @@ main {
           var(--VioletBlue),
           var(--PersianBlue)
         );
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-name: bounceIn;
+        animation-duration: 300ms;
+        animation-delay: 200ms;
         h3 {
           font-size: 15vw;
           font-weight: 800;
@@ -70,6 +82,11 @@ main {
         margin: 1rem auto;
         line-height: 2.1rem;
       }
+      h2,
+      p {
+        animation-name: fadeInDown;
+        animation-duration: 300ms;
+      }
     }
     &:nth-child(2) {
       h1 {
@@ -81,12 +98,17 @@ main {
         display: grid;
         gap: 1.8rem;
         li {
+          opacity: 0;
+          animation-fill-mode: forwards;
+          animation-name: fadeInRight;
+          animation-duration: 300ms;
           display: flex;
           align-items: center;
           gap: 1.5rem;
           padding: 2rem;
           border-radius: 1rem;
           &:nth-child(1) {
+            animation-delay: 150ms;
             background-color: color-mix(
               in hsl,
               var(--LightRed) 10%,
@@ -97,6 +119,7 @@ main {
             }
           }
           &:nth-child(2) {
+            animation-delay: 300ms;
             background-color: color-mix(
               in hsl,
               var(--OrangeyYellow) 10%,
@@ -107,6 +130,7 @@ main {
             }
           }
           &:nth-child(3) {
+            animation-delay: 450ms;
             background-color: color-mix(
               in hsl,
               var(--GreenTeal) 10%,
@@ -117,6 +141,7 @@ main {
             }
           }
           &:nth-child(4) {
+            animation-delay: 600ms;
             background-color: color-mix(
               in hsl,
               var(--CobaltBlue) 10%,
@@ -168,7 +193,6 @@ main {
   }
   body {
     padding: 3rem;
-    min-height: 100vh;
     display: grid;
     place-items: center;
     main {
