@@ -161,3 +161,40 @@ main {
     }
   }
 }
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 70%;
+  }
+  body {
+    padding: 3rem;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    main {
+      max-width: 1000px;
+      grid-template-columns: repeat(2, 1fr);
+      box-shadow: 1rem 1rem 3rem 0rem
+        color-mix(in hsl, var(--LightLavender) 50%, transparent);
+      border-radius: 3rem;
+      overflow: hidden;
+      section {
+        &:nth-child(1) {
+          border-radius: 3rem;
+          div {
+            width: 57%;
+            h3 {
+              font-size: 6rem;
+            }
+            h4 {
+              font-size: 1.5rem;
+            }
+          }
+          p {
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+}
