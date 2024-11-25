@@ -7,8 +7,10 @@
     "dev": "vite --open --host",
     "build": "vite build",
     "preview": "vite preview --open --host",
-    "deploy": "surge ./dist syntra-fe-2024-results.surge.sh",
-    "postdeploy": "start chrome https://syntra-fe-2024-results.surge.sh"
+    "deploy-main": "surge ./dist syntra-fe-2024-results.surge.sh",
+    "postdeploy-main": "start chrome https://syntra-fe-2024-results.surge.sh",
+    "deploy-develop": "surge ./dist syntra-fe-2024-results-test.surge.sh",
+    "postdeploy-develop": "start chrome https://syntra-fe-2024-results-test.surge.sh"
   },
   "keywords": [],
   "author": "",

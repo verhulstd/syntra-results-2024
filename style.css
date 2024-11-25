@@ -126,8 +126,6 @@ main {
               color: var(--CobaltBlue);
             }
           }
-          img {
-          }
           p {
             &:nth-of-type(1) {
               margin-right: auto;
