@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:opsz,wght@14..32,100..900&display=swap");
 :root {
   font-size: 62.5%;
   --LightSlateBlue: hsl(252, 100%, 67%);
@@ -16,6 +17,149 @@
 * {
   box-sizing: border-box;
 }
-h1 {
-  background-color: var(--OrangeyYellow);
+
+main {
+  display: grid;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  section {
+    padding: 3rem;
+    &:nth-child(1) {
+      background-image: linear-gradient(
+        var(--LightSlateBlue),
+        var(--LightRoyalBlue)
+      );
+      border-radius: 0 0 3rem 3rem;
+      text-align: center;
+      color: white;
+      h1 {
+        color: var(--LightLavender);
+        font-weight: 700;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin: 3rem auto;
+        width: 45%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-image: linear-gradient(
+          var(--VioletBlue),
+          var(--PersianBlue)
+        );
+        h3 {
+          font-size: 15vw;
+          font-weight: 800;
+        }
+        h4 {
+          color: var(--LightLavender);
+          font-size: 3vw;
+        }
+      }
+      h2 {
+        font-size: 2.3rem;
+        font-weight: 800;
+      }
+      p {
+        color: var(--LightLavender);
+        width: 70%;
+        margin: 1rem auto;
+        line-height: 2.1rem;
+      }
+    }
+    &:nth-child(2) {
+      h1 {
+        color: black;
+        font-weight: 700;
+      }
+      ul {
+        margin: 3rem 0;
+        display: grid;
+        gap: 1.8rem;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 2rem;
+          border-radius: 1rem;
+          &:nth-child(1) {
+            background-color: color-mix(
+              in hsl,
+              var(--LightRed) 10%,
+              transparent
+            );
+            p:first-of-type {
+              color: var(--LightRed);
+            }
+          }
+          &:nth-child(2) {
+            background-color: color-mix(
+              in hsl,
+              var(--OrangeyYellow) 10%,
+              transparent
+            );
+            p:first-of-type {
+              color: var(--OrangeyYellow);
+            }
+          }
+          &:nth-child(3) {
+            background-color: color-mix(
+              in hsl,
+              var(--GreenTeal) 10%,
+              transparent
+            );
+            p:first-of-type {
+              color: var(--GreenTeal);
+            }
+          }
+          &:nth-child(4) {
+            background-color: color-mix(
+              in hsl,
+              var(--CobaltBlue) 10%,
+              transparent
+            );
+            p:first-of-type {
+              color: var(--CobaltBlue);
+            }
+          }
+          img {
+          }
+          p {
+            &:nth-of-type(1) {
+              margin-right: auto;
+              font-weight: 700;
+              font-size: 1.6rem;
+            }
+            &:nth-of-type(2) {
+              color: rgba(0, 0, 0, 0.4);
+              strong {
+                font-weight: 800;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+      a {
+        padding: 2rem;
+        border-radius: 2.6rem;
+        background: var(--DarkGrayBlue);
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        &:hover {
+          background: linear-gradient(
+            var(--LightSlateBlue),
+            var(--LightRoyalBlue)
+          );
+        }
+      }
+    }
+  }
 }
